@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mushroom Classification</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+    
+            .container {
+                max-width: 600px;
+                margin-top: 50px;
+            }
+    
+            h1 {
+                color: #343a40;
+                text-align: center;
+            }
+    
+            form {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            label {
+                color: #495057;
+                margin-bottom: 10px;
+            }
+    
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ced4da;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+    
+            button {
+                padding: 10px 20px;
+                background-color: #28a745;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            button:hover {
+                background-color: #218838;
+            }
+        </style>
+    </head>
+
+
+<body>
+    <div class="container">
+        <h1>Mushroom Classification</h1>
+        <form action="/predict" method="post">
+
+            <div class="form-group">
+            <label for="bruises">Bruises</label>
+            <select class="form-control" id="bruises" name="bruises">
+                <option value="0">No</option>
+                <option value="1">Yes</option>     
+            </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="odor">Odour</label>
+                <select class="form-control" id="odor" name="odor">
+                    <option value="0">Foul Smell</option>
+                    <option value="1">No Smell</option>   
+                    <option value="2">Other Smell</option>   
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gil_spacing">Gill Spacing</label>
+                <select class="form-control" id="gill_spacing" name="gill_spacing">
+                    <option value="0">Close</option>
+                    <option value="1">Crowded</option>     
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gil_size">Gill Size</label>
+                <select class="form-control" id="gill_size" name="gill_size">
+                    <option value="0">Broad</option>
+                    <option value="1">Narrow</option>     
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="gil_color">Gill color</label>
+                <select class="form-control" id="gill_color" name="gill_color">
+                    <option value="0">Buff</option>
+                    <option value="1">Gray or Chocolate</option> 
+                    <option value="2">Brown</option>
+                    <option value="3">Others</option>
+                    <option value="4">Pink</option>
+                    <option value="5">White</option>    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="stalk_surface_above">Stalk Surface Above Ring</label>
+                <select class="form-control" id="stalk_surface_above" name="stalk_surface_above">
+                    <option value="0">Others</option>
+                    <option value="1">Smooth</option>     
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="stalk_surface_below">Stalk Surface Below Ring</label>
+                <select class="form-control" id="stalk_surface_below" name="stalk_surface_below">
+                    <option value="0">Others</option>
+                    <option value="1">Smooth</option>    
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="ring_type">Ring Type</label>
+                <select class="form-control" id="ring_type" name="ring_type">
+                    <option value="0">Evanascent</option>
+                    <option value="1">Others</option>   
+                    <option value="2">Pendant</option>  
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="spore">Spore Print Color</label>
+                <select class="form-control" id="spore" name="spore">
+                    <option value="0">Black</option>
+                    <option value="1">Brown</option>   
+                    <option value="2">Others</option>  
+                    <option value="3">White</option> 
+                </select>
+            </div>
+
+            <div class="form-group"> 
+                <label for="population">Population</label>
+                <select class="form-control" id="population" name="population">
+                    <option value="0">Clustered / Abundant / Soliatary</option>
+                    <option value="1">Several</option>    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="habitat">Habitat</label>
+                <select class="form-control" id="habitat" name="habitat">
+                    <option value="0">Woods</option>
+                    <option value="1">Grasses</option>   
+                    <option value="2">Others</option>  
+                    <option value="3">Paths</option> 
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success"><i class="fas fa-magic"></i> Predict</button>
+
+        </form>
+    </div>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+</body>
+</html>
+
+
+
+
+            
+            

@@ -1,0 +1,23 @@
+[2023-12-24 21:32:58,246] 33 root - INFO - Data ingestion and splitting started.
+[2023-12-24 21:32:58,289] 41 root - INFO - Data ingestion and splitting completed. Train and test sets saved in the 'artifacts' folder.
+[2023-12-24 21:32:58,290] 36 root - INFO - Data transformation started.
+[2023-12-24 21:32:58,348] 47 root - INFO - Data transformation completed.
+[2023-12-24 21:32:58,348] 26 root - INFO -  Model Training started.
+[2023-12-24 21:32:58,429] 52 root - INFO - Trained model saved to artifacts\trained_model.joblib
+[2023-12-24 21:32:58,429] 55 root - INFO - Accuracy: 1.0000
+[2023-12-24 21:32:58,430] 56 root - INFO - Precision: 1.0000
+[2023-12-24 21:32:58,430] 57 root - INFO - Recall: 1.0000
+[2023-12-24 21:32:58,431] 58 root - INFO - F1 Score: 1.0000
+[2023-12-24 21:32:58,431] 60 root - INFO - Model training completed.
+[2023-12-24 21:32:58,442] 43 root - INFO - Model Accuracy on Test Data: 1.0000
+[2023-12-24 21:33:19,835] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-12-24 21:33:19,836] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2023-12-24 21:33:19,837] 96 werkzeug - INFO -  * Restarting with stat
+[2023-12-24 21:33:20,702] 96 werkzeug - WARNING -  * Debugger is active!
+[2023-12-24 21:33:20,705] 96 werkzeug - INFO -  * Debugger PIN: 293-757-828
+[2023-12-24 21:33:24,734] 96 werkzeug - INFO - 127.0.0.1 - - [24/Dec/2023 21:33:24] "GET / HTTP/1.1" 200 -
+[2023-12-24 21:33:29,094] 15 root - INFO - Prediction started.
+[2023-12-24 21:33:29,099] 26 root - INFO - Prediction completed. Result: Edible
+[2023-12-24 21:33:29,103] 96 werkzeug - INFO - 127.0.0.1 - - [24/Dec/2023 21:33:29] "POST /predict HTTP/1.1" 200 -
+[2023-12-24 21:33:33,083] 96 werkzeug - INFO - 127.0.0.1 - - [24/Dec/2023 21:33:33] "GET / HTTP/1.1" 200 -
