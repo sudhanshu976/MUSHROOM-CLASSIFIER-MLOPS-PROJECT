@@ -1,0 +1,13 @@
+[2023-12-26 10:28:40,270] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.72.65:8080
+[2023-12-26 10:28:40,271] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2023-12-26 10:28:40,273] 96 werkzeug - INFO -  * Restarting with stat
+[2023-12-26 10:28:41,140] 96 werkzeug - WARNING -  * Debugger is active!
+[2023-12-26 10:28:41,143] 96 werkzeug - INFO -  * Debugger PIN: 293-757-828
+[2023-12-26 10:28:50,844] 96 werkzeug - INFO - 127.0.0.1 - - [26/Dec/2023 10:28:50] "GET / HTTP/1.1" 200 -
+[2023-12-26 10:28:51,821] 96 werkzeug - INFO - 127.0.0.1 - - [26/Dec/2023 10:28:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2023-12-26 10:28:54,723] 15 root - INFO - Prediction started.
+[2023-12-26 10:28:54,735] 26 root - INFO - Prediction completed. Result: Edible
+[2023-12-26 10:28:54,740] 96 werkzeug - INFO - 127.0.0.1 - - [26/Dec/2023 10:28:54] "POST /predict HTTP/1.1" 200 -

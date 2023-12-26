@@ -10,3 +10,12 @@
 [2023-12-25 11:38:04,924] 26 root - INFO - Prediction completed. Result: Poisonous
 [2023-12-25 11:38:04,927] 96 werkzeug - INFO - 127.0.0.1 - - [25/Dec/2023 11:38:04] "POST /predict HTTP/1.1" 200 -
 [2023-12-25 11:38:10,619] 96 werkzeug - INFO - 127.0.0.1 - - [25/Dec/2023 11:38:10] "GET / HTTP/1.1" 200 -
+[2023-12-25 12:02:30,455] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2023-12-25 12:02:30,455] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2023-12-25 12:02:30,457] 96 werkzeug - INFO -  * Restarting with stat
+[2023-12-25 12:02:32,654] 96 werkzeug - WARNING -  * Debugger is active!
+[2023-12-25 12:02:32,659] 96 werkzeug - INFO -  * Debugger PIN: 293-757-828
+[2023-12-25 12:02:34,823] 15 root - INFO - Prediction started.
+[2023-12-25 12:02:34,833] 26 root - INFO - Prediction completed. Result: Edible
+[2023-12-25 12:02:34,839] 96 werkzeug - INFO - 127.0.0.1 - - [25/Dec/2023 12:02:34] "POST /predict HTTP/1.1" 200 -
